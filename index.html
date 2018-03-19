@@ -8,6 +8,26 @@
     <title>fundebug-demo</title>
 </head>
 <body>
-    
+    <script>
+        function component() {
+            var element = document.createElement('div');
+            var btn = document.createElement('button');
+
+            element.innerHTML = 'Hello fundebug';
+
+            btn.innerHTML = 'Click me and check the console!';
+            btn.onclick = printMe;
+
+            element.appendChild(btn);
+
+            return element;
+        }
+
+        function printMe() {
+            console.log('hello fundebug.')
+        }
+
+        document.body.appendChild(component());
+    </script>
 </body>
 </html>
